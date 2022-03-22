@@ -26,7 +26,7 @@ class MainController extends Controller {
 	 */
 	public function getIndex()
     {
-       $user = null;
+       $user = null; $ret = ['status' => "ok", 'message' => "Copycat Fragrances Ometria API"];
 
 		if(Auth::check())
 		{
@@ -35,9 +35,10 @@ class MainController extends Controller {
 
 		
 		$signals = $this->helpers->signals;
-        $courses = $this->helpers->getClasses();
+       // $courses = $this->helpers->getClasses();
         #dd($user);
-    	return view('index',compact(['user','courses','signals']));
+    	//return view('index',compact(['user','courses','signals']));
+        return json_encode($ret);
     }
 	
 
