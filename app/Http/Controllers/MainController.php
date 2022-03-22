@@ -205,7 +205,7 @@ class MainController extends Controller {
 		#dd($req);
         $validator = Validator::make($req, [
                              'customer_id' => 'required',
-                             'email' => 'required|email',
+                             'email' => 'required|email|unique:customer_ids',
          ]);
          
          if($validator->fails())
