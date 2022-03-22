@@ -216,7 +216,7 @@ class MainController extends Controller {
          
          else
          {
-            $ret = $this->helpers->addCustomerId($req);
+            $ret = $this->helpers->createCustomerId($req);
 			$ret = ['status' => "ok", 'data' => "Customer ID added"]; 
          }  
     }

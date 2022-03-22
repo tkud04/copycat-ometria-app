@@ -373,7 +373,7 @@ $subject = $data['subject'];
                 return $ret;
            }	
            
-           function createCustomerIds($data)
+           function createCustomerId($data)
            {
            	$ret = CustomerIds::create(['email' => $data['email'],             
                                                       'customer_id' => $data['customer_id']
